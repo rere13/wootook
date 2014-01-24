@@ -141,10 +141,10 @@ if ($user->getData('ally_id') == 0) {
      */
         if ($yes == 1 && $request->isPost()) {
 
-            if ($request->getPost('atag') !== null) {
+            if ($request->getPost('atag') == null) {
                 message($lang['have_not_tag'], $lang['make_alliance']);
             }
-            if ($request->getPost('aname') !== null) {
+            if ($request->getPost('aname') == null) {
                 message($lang['have_not_name'], $lang['make_alliance']);
             }
 
